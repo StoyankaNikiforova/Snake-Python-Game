@@ -3,12 +3,12 @@ from class_vector2D import Vector2D
 
 
 class Cell(WorldObject, Vector2D):
-    def __init__(self, contents=None):
-        super().__init__()
+    def __init__(self, x, y,  contents=None,):
+        super().__init__(x, y)
         self.contents = contents
 
     def __repr__(self):
-        return self.__str__
+        return self.__str__()
 
     def __str__(self):
-        return '{}{}{}'.format(self.x, self.y, self.simbol)
+        return self.simbol

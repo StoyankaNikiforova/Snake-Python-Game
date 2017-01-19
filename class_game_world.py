@@ -9,8 +9,7 @@ class GameWorld():
     def generate_content(self, size):
         matrix = []
         for i in range(size):
-            cell = Cell()
-            matrix.append([cell for x in range(size)])
+            matrix.append([Cell(i, x) for x in range(size)])
         return matrix
 
     def add_content_item(self, cell):
