@@ -1,0 +1,2 @@
+# charcters
+EMPTY_SIMBOL = '□'
