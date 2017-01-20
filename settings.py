@@ -1,2 +1,3 @@
 # charcters
-EMPTY_SIMBOL = '□'
+SIMBOL = {'Empty': '□', 'Strawberry': '*', 'Banana': '🍌' }
+# FOOD_SIMBOLS = {'Strawberry': '*', 'Banana': '🍌' }

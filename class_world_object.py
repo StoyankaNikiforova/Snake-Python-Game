@@ -1,10 +1,18 @@
-from settings import EMPTY_SIMBOL
+from settings import SIMBOL
 
 
 class WorldObject:
-    def __init__(self, simbol=EMPTY_SIMBOL):
-        self.simbol = simbol
-        super(WorldObject, self).__init__()
+    def __init__(self, name='Empty', energy=0):
+        self.name = name
+        self.energy = energy
+        super().__init__()
 
     def draw(self):
-        pass
+        simbol = SIMBOL[self.name]
+        return simbol
+
+    def __str__(self):
+        return self.draw()
+
+    def __repr__(self):
+        return self.__str__()

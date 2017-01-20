@@ -23,6 +23,6 @@ class GameWorld():
         for i in self.content:
             row = ""
             for j in i:
-                row += ' {}'.format(str(j))
+                row += ' {}'.format(str(j.draw()))
             repr_str += '\n{}'.format(row)
         return repr_str
