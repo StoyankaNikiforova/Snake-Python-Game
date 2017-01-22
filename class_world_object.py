@@ -2,9 +2,8 @@ from settings import SIMBOL
 
 
 class WorldObject:
-    def __init__(self, name='Empty', energy=0):
+    def __init__(self, name='Empty'):
         self.name = name
-        self.energy = energy
         super().__init__()
 
     def draw(self):

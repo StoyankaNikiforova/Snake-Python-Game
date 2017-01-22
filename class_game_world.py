@@ -15,14 +15,14 @@ class GameWorld():
     def add_content_item(self, cell):
         self.content[cell.x][cell.y] = cell
 
-    def __repr__(self):
-        return self.__str__
-
     def __str__(self):
         repr_str = ''
         for i in self.content:
             row = ""
             for j in i:
-                row += ' {}'.format(str(j.draw()))
+                row += ' {}'.format(j.name)
             repr_str += '\n{}'.format(row)
         return repr_str
+
+    def __repr__(self):
+        return self.__str__()
