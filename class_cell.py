@@ -9,3 +9,17 @@ class Cell(WorldObject):
         self.y = y
         self.contents = contents
         super().__init__(contents)
+
+
+class Cells(object):
+    def __init__(self, cells):
+        self.cells = cells
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if not self.cells:
+            raise StopIteration
+
+        return self.pandas.pop()

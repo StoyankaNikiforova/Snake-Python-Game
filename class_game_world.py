@@ -1,4 +1,5 @@
-from class_cell import Cell
+from class_cell import Cell, Cells
+from validators import chekc_free_cells
 
 
 class GameWorld():
@@ -12,15 +13,17 @@ class GameWorld():
             matrix.append([Cell(i, x) for x in range(size)])
         return matrix
 
-    def add_content_item(self, cell):
-        self.content[cell.x][cell.y] = cell
+    # @chekc_free_cells(self.content)
+    def add_content_items(self, cells):
+        for cell in cells:
+            self.content[cell.x][cell.y] = cell
 
     def __str__(self):
         repr_str = ''
         for i in self.content:
             row = ""
             for j in i:
-                row += ' {}'.format(j.name)
+                row += ' {}'.format(j)
             repr_str += '\n{}'.format(row)
         return repr_str
 

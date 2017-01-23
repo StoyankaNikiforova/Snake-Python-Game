@@ -20,12 +20,12 @@ class Python:
 
     def draw(self):
         head_cell = Cell(self.position.x, self.position.y, self.head)
-        self.world.add_content_item(head_cell)
+        self.world.add_content_items(head_cell)
 
         part_position = self.position + self.direction
         for i in range(self.size):
             part_cell = Cell(part_position.x, part_position.y, self.part)
-            self.world.add_content_item(part_cell)
+            self.world.add_content_items(part_cell)
             part_position += self.direction
 
     def __str__(self):

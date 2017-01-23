@@ -6,10 +6,10 @@ class testWorlfObject(unittest.TestCase):
     def setUp(self):
         self.obj = WorldObject()
 
-    def test_drow(self):
+    def test_draw(self):
         self.assertEqual(self.obj.draw(), '□')
 
-    def test_drow(self):
+    def test_draw(self):
         self.assertEqual(str(self.obj), '+')
 
 

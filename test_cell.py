@@ -1,11 +1,12 @@
 import unittest
-from settings import SQRT_SIMBOL
+from settings import SIMBOL
 from class_cell import Cell
+from class_world_object import WorldObject
 
 
 class test_game_world(unittest.TestCase):
     def setUp(self):
-        self.cell = Cell(SQRT_SIMBOL)
+        self.cell = Cell(1, 2, contents=WorldObject())
 
     def test_print_cell(self):
         print(self.cell)
